@@ -1,0 +1,1710 @@
+/* Estilo Completo da caixa Body */
+body {
+  background-color: #3a4a83;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/*  Definição do CSS para a Autentication page */
+
+/* tamanho da caixa central na página*/
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 75vh;
+  margin: 10vh auto;
+  box-shadow: 7px 7px 20px rgb(63, 63, 63);
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+/* Caixa à esquerda com a imagem do fundo */
+.left {
+  flex: 50%;
+  height: 100%;
+  background-image: url("images/NMMback.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Caixa à direita com o titulo do jogo */
+.right {
+  flex: 50%;
+  height: 100%;
+  background-color: #5969a6;
+  align-items: flex-start;
+}
+
+/* Posicionamento do titulo na right box */
+.form {
+  text-align: left;
+  width: 100%;
+}
+
+/* Cor do input do usuario nas células */
+.form * {
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+}
+
+/* "Nine Men´s Morris do Titulo" */
+.login-game-name {
+  font-family: "ArcadeClassic", sans-serif;
+  letter-spacing: 10px;
+  font-size: 100px;
+  margin-left: 10%;
+  margin-top: 1%;
+  margin-bottom: 0%;
+  color: #e27800;
+  text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,  
+    -1px 1px 0 #000,  
+    1px 1px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000,
+    -3px -3px 0 #000,
+    3px -3px 0 #000,
+    -3px 3px 0 #000,
+    3px 3px 0 #000; /* Contorno preto ainda mais espesso */
+}
+
+/* "Palavra Game do Titulo" */
+.login-game-name-game {
+  font-family: "ArcadeClassic", sans-serif;
+  letter-spacing: 10px;
+  font-size: 100px;
+  margin-left: 15%;
+  color: #e27800;
+  margin-top: -3%;
+  text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,  
+    -1px 1px 0 #000,  
+    1px 1px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000,
+    -3px -3px 0 #000,
+    3px -3px 0 #000,
+    -3px 3px 0 #000,
+    3px 3px 0 #000; /* Contorno preto ainda mais espesso */
+}
+
+/* Espaço de cima para baixo do titulo para user e pass*/
+.auth-credentials {
+  margin-top: 50px;
+}
+/* Espaço entre as células: user e password*/
+.input-group { 
+  margin-bottom: 10px;
+}
+
+/* conjunto icones de input, linhas e texto */
+.input-group .icon {
+  margin-left: 19%;
+  margin-right: 10px;
+  font-size: 20px;
+  color: #ffffff;
+  vertical-align: middle;
+  position: relative;
+  top: 4px;
+  text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,  
+    -1px 1px 0 #000,  
+    1px 1px 0 #000,
+    -2px 0 0 #000,
+    2px 0 0 #000,
+    0 -2px 0 #000,
+    0 2px 0 #000; /* Contorno preto moderado */
+}
+
+/* linhas do input */
+.input-group input {
+  width: 63%;
+  height: 20px;
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  background-color: transparent;
+  outline: none;
+  font-size: 18px;
+  border-radius: 0;
+}
+
+/* cor da linha ao clicar para escrever input */
+.input-group input:focus {
+  border-bottom: 3px solid #e27800;
+}
+
+/* tamanho e cor de Username e Password */
+.input-group input::placeholder {
+  font-size: 15px;
+  color: #ffffff;
+}
+
+/* botao de login */
+.button-style-login {
+  font-family: "ArcadeClassic", sans-serif;
+  float: right;
+  margin-right: 14%;
+  margin-top: 60px;
+  height: 50px;
+  width: 65%;
+  border: none;
+  background-color: #e27800;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 25px;
+  text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,  
+    -1px 1px 0 #000,  
+    1px 1px 0 #000,
+    -2px 0 0 #000,
+    2px 0 0 #000,
+    0 -2px 0 #000,
+    0 2px 0 #000; /* Contorno preto moderado */
+}
+
+/* cor do texto do botao login ao passar o rato por cima */
+.button-style-login:hover {
+  color: #fff200;
+}
+
+/* Media Screen Queries para ajustar o layout e os tamanhos a diferentes tamanhos de telas */
+@media screen and (max-height: 830px) {
+  .login-game-name {
+    font-size: 80px;
+    margin-left: 7%;
+    margin-top: 9%;
+  }
+
+  .login-game-name-game {
+    font-size: 80px;
+    margin-left: 12%;
+    margin-bottom: 0%;
+  }
+
+  .auth-credentials {
+    margin-top: 5%;
+  }
+
+  .input-group input {
+    width: 60%;
+  }
+
+  .button-style-login {
+    margin-top: 20px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .auth-page {
+    width: 70%;
+  }
+
+  .left {
+    flex: 40%;
+  }
+
+  .right {
+    flex: 60%;
+  }
+
+  .login-game-name {
+    margin-top: 8%;
+  }
+
+  .auth-credentials {
+    margin-top: 2%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .auth-page {
+    width: 90%;
+  }
+
+  .left {
+    flex: 0%;
+  }
+
+  .right {
+    flex: 100%;
+  }
+
+  .login-game-name {
+    margin-top: 5%;
+  }
+
+  .auth-credentials {
+    margin-top: 2%;
+  }
+}
+
+/*  Definição do CSS para a Homepage */
+
+/* define o conteiner principal da homepage */
+.homepage {
+  height: 100vh;
+  display: none;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+/* define a secçao superior da tela */
+.logotipo {
+  width: 100%;
+  height: 40%;
+  background-color: #3a4a83;
+}
+
+/* texto do Nine Men´s Morris */
+.NMM-text {
+  font-family: "ArcadeClassic", sans-serif;
+  font-size: 150px;
+  letter-spacing: 10px;
+  color: #e27800;
+  margin-top: 3%;
+  text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,  
+    -1px 1px 0 #000,  
+    1px 1px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000,
+    -3px -3px 0 #000,
+    3px -3px 0 #000,
+    -3px 3px 0 #000,
+    3px 3px 0 #000; /* Contorno preto ainda mais espesso */
+}
+
+/* texto referente a Game abaixo do de cima */
+.game-text {
+  font-family: "ArcadeClassic", sans-serif;
+  letter-spacing: 5px;
+  font-size: 50px;
+  color: #e27800;
+  margin-top: -30px;
+  text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,  
+    -1px 1px 0 #000,  
+    1px 1px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000,
+    -3px -3px 0 #000,
+    3px -3px 0 #000,
+    -3px 3px 0 #000,
+    3px 3px 0 #000; /* Contorno preto ainda mais espesso */
+}
+
+/* toda a configuração do botão start */
+.left-buttons {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 5%;
+}
+
+.left-buttons button {
+  width: 35%;
+  height: 100%;
+  margin: 0;
+  font-size: 30%;
+  border: 0px;
+  background-clip: padding-box;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.left-buttons button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-color: #3a4a83;
+  transition: filter 0.4s ease;
+  pointer-events: none; /* Não permite interação para o background */
+}
+
+.left-buttons button .button-text {
+  color: #ffffff;
+  position: relative;
+  font-family: "ArcadeClassic", sans-serif;                            
+  letter-spacing: 15px;
+  font-size: 110px;
+  z-index: 1;
+  text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,  
+    -1px 1px 0 #000,  
+    1px 1px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000,
+    -3px -3px 0 #000,
+    3px -3px 0 #000,
+    -3px 3px 0 #000,
+    3px 3px 0 #000; /* Contorno preto ainda mais espesso */
+}
+
+.left-buttons button .button-text:hover {
+  text-shadow: 
+    -1px -1px 0 #e27800,  
+    1px -1px 0 #e27800,  
+    -1px 1px 0 #e27800,  
+    1px 1px 0 #e27800,
+    -2px -2px 0 #e27800,
+    2px -2px 0 #e27800,
+    -2px 2px 0 #e27800,
+    2px 2px 0 #e27800,
+    -3px -3px 0 #e27800,
+    3px -3px 0 #e27800,
+    -3px 3px 0 #e27800,
+    3px 3px 0 #e27800; /* Contorno preto ainda mais espesso */
+}
+
+/* toda a configuração dos botões: classifications, game rules e sign out */
+.right-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 50%;
+}
+
+.right-buttons button {
+  width: 35%;
+  height: 100%;
+  margin: 0;
+  font-size: 30%;
+  border: 0px;
+  border-radius: 0px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.right-buttons button:nth-child(1)::before {
+  content: "";
+  background-size: cover;
+  background-color: #3a4a83;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: filter 0.4s ease;
+}
+
+.right-buttons button:nth-child(2)::before {
+  content: "";
+  background-size: cover;
+  background-color: #3a4a83;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: filter 0.4s ease;
+}
+
+.right-buttons button:nth-child(3)::before {
+  content: "";
+  background-size: cover;
+  background-color: #3a4a83;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: filter 0.4s ease;
+}
+
+.right-buttons button .button-text {
+  color: #ffffff;
+  position: relative;
+  font-family: "ArcadeClassic", sans-serif;
+  font-size: 50px;
+  letter-spacing: 5px;
+  text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,  
+    -1px 1px 0 #000,  
+    1px 1px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000,
+    -3px -3px 0 #000,
+    3px -3px 0 #000,
+    -3px 3px 0 #000,
+    3px 3px 0 #000; /* Contorno preto ainda mais espesso */
+}
+
+.right-buttons button:hover .button-text {
+  text-shadow: 
+    -1px -1px 0 #e27800,  
+    1px -1px 0 #e27800,  
+    -1px 1px 0 #e27800,  
+    1px 1px 0 #e27800,
+    -2px -2px 0 #e27800,
+    2px -2px 0 #e27800,
+    -2px 2px 0 #e27800,
+    2px 2px 0 #e27800,
+    -3px -3px 0 #e27800,
+    3px -3px 0 #e27800,
+    -3px 3px 0 #e27800,
+    3px 3px 0 #e27800; /* Contorno preto ainda mais espesso */
+}
+
+@media (max-width: 768px) {
+  .homepage-buttons {
+    flex-direction: column;
+  }
+
+  .logotipo {
+    height: 35%;
+  }
+}
+
+/*  Definição do CSS para a página das Regras do jogo */
+
+.game-rules {
+  display: none;
+}
+
+/* Estrutura para centrar o botão no topo */
+.top-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+
+/* Ajustes na exibição do botão */
+.button-style-rules {
+  width: 270px;
+  height: 70px;
+  border-radius: 10px;
+  border:0;
+  cursor: pointer;
+  font-family: "ArcadeClassic", sans-serif;
+  font-weight: 700;
+  background-color: #ffffff;
+  color: #3a4a83;
+  font-size: 20px;
+  text-align: center;
+}
+
+.button-style-rules:hover {
+  color: #e27800;
+}
+
+/* Estrutura para o quadro de regras */
+.rules-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Return To Home Page */
+.title-and-rules {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+}
+
+/* Caixa completa */
+.game-rules-list {
+  margin-right: 3%;
+  width: 80%;
+  margin-top: 20px;
+}
+
+/* Topo da caixa das regras */
+.top-window {
+  text-align: justify;
+  background-color: #e27800;
+  font-size: 40px;
+  font-family: "ArcadeClassic", sans-serif;
+  padding: 30px;
+  display: flex;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,  
+    -1px 1px 0 #000,  
+    1px 1px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000,
+    -3px -3px 0 #000,
+    3px -3px 0 #000,
+    -3px 3px 0 #000,
+    3px 3px 0 #000; /* Contorno preto ainda mais espesso */
+}
+
+/* caixa das regras */
+.content-rules {
+  text-align: justify;
+  background-color: #5969a6;
+  font-family: 'Arcade Rounded', sans-serif;                        
+  padding: 30px;
+  box-shadow: 7px 7px 12px rgb(63, 63, 63);
+  color: #ffffff;
+  font-size: 11px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 100%;
+  text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,  
+    -1px 1px 0 #000,  
+    1px 1px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000,
+    -3px -3px 0 #000,
+    3px -3px 0 #000,
+    -3px 3px 0 #000,
+    3px 3px 0 #000; /* Contorno preto ainda mais espesso */
+}
+
+/* Media Queries para ajustar tamanhos */
+@media screen and (max-width: 876px) {
+  .content-rules {
+    font-size: 18px;
+  }
+}
+
+
+/*  Definição do CSS para a página das Classificações */
+
+/* para a página aparecer oculta o display none */
+.classifications {
+  display: none;
+  height: 913px;
+}
+
+/* conjunto titulo, botao e lado direito */
+.classification-page {
+  display: flex;
+  margin-top: 130px;
+  width: 100%;
+}
+
+.classification-title {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Lado direito das classificações */
+.classification-results {
+  margin-right: 40px;
+  flex: 50%;
+}
+
+.titles .title-font {
+  font-family: "ArcadeClassic", sans-serif;
+  font-size: 80px;
+  letter-spacing: 10px;
+  color: #ffffff;
+  text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,  
+    -1px 1px 0 #000,  
+    1px 1px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000,
+    -3px -3px 0 #000,
+    3px -3px 0 #000,
+    -3px 3px 0 #000,
+    3px 3px 0 #000; /* Contorno preto ainda mais espesso */
+}
+
+/* espaço entre o botão e o título */
+.button-classification-div {
+  margin-top: 20px;
+}
+
+.button-style-classification {
+  width: 200px;
+  height: 100px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "ArcadeClassic", sans-serif;
+  font-weight: 700;
+  background-color: #ffffff;
+  color: #3a4a83;
+  font-size: 19px;
+  border: 0;
+  margin-top: 30px;
+}
+
+.button-style-classification:hover {
+  color: #e27800;
+}
+
+.two-buttons {
+  margin-bottom: 20px;
+}
+
+.button-matches-table,
+.button-win-rate-table {
+  width: 205px;
+  height: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "ArcadeClassic", sans-serif;
+  font-weight: 700;
+  background-color: #e27800;
+  color: #ffffff;
+  font-size: 17px;
+  border: 0;
+  margin-top: 30px;
+  text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,  
+    -1px 1px 0 #000,  
+    1px 1px 0 #000,
+    -2px 0 0 #000,
+    2px 0 0 #000,
+    0 -2px 0 #000,
+    0 2px 0 #000; /* Contorno preto moderado */
+}
+
+.button-matches-table:hover,
+.button-win-rate-table:hover {
+  color: #e27800;
+}
+
+.button-matches-table {
+  margin-right: 10px;
+}
+
+.button-win-rate-table {
+  margin-left: 10px;
+}
+
+.board-filter {
+  display: flex;
+  justify-content: center;
+}
+
+.board-filter > div {
+  margin: 0 10px;
+}
+
+.board-size-p,
+.game-mode-p {
+  font-family: "Arcade Rounded", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 0px;
+  text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,  
+    -1px 1px 0 #000,  
+    1px 1px 0 #000,
+    -2px 0 0 #000,
+    2px 0 0 #000,
+    0 -2px 0 #000,
+    0 2px 0 #000; /* Contorno preto moderado */
+}
+
+.select-mirror {
+  position: relative;
+  display: flex;
+  width: 13em;
+  height: 3em;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.select-mirror::after {
+  font-size: 16px;
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  transition: 0.7s all ease;
+  pointer-events: none;
+}
+
+.select-mirror:hover::after {
+  color: #e27800;
+}
+
+.select-1,
+.select-2 {
+  appearance: none;
+  outline: 0;
+  border: 0;
+  flex: 1;
+  padding: 0 1em;
+  background-color: #34495e;
+  cursor: pointer;
+  font-size: 15px;
+  background-color: #5969a6;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+}
+
+.select-1::-ms-expand,
+.select-2::-ms-expand {
+  display: none;
+}
+
+.win-rate-table {
+  width: 900px;
+  height: 100px;
+  display: table;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border-collapse: collapse;
+  border-width: 10px;
+  background-color: #e27800;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,  
+    -1px 1px 0 #000,  
+    1px 1px 0 #000,
+    -2px 0 0 #000,
+    2px 0 0 #000,
+    0 -2px 0 #000,
+    0 2px 0 #000; /* Contorno preto moderado */
+}
+
+.classification-page tr {
+  height: 80px;
+}
+
+.classifications-table th {
+  padding: 18px;
+  background-color: #e27800;
+  font-weight: bold;
+}
+
+.win-rate-table th {
+  padding: 10px;
+  background-color: #e27800;
+  font-weight: bold;
+  width: 33.33%;
+}
+
+.classifications-table .first {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.win-rate-table .first {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.classifications-table .last,
+.win-rate-table .last {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+@media screen and (max-width: 1600px) {
+  .classification-page {
+    margin-top: 0px;
+    flex-direction: column;
+  }
+
+  .classification-title {
+    margin-top: 50px;
+    flex-direction: row;
+    flex: 30%;
+  }
+
+  .classification-results {
+    flex: 70%;
+  }
+
+  .titles {
+    margin-right: 30px;
+    margin-bottom: 0px;
+    margin-top: 50px;
+  }
+
+  .button-style-classification {
+    margin-left: 30px;
+  }
+
+  .classifications-table,
+  .win-rate-table {
+    width: 800px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 876px) {
+  .classification-title {
+    flex-direction: column;
+  }
+
+  .button-style-classification {
+    margin-left: 0px;
+  }
+
+  .titles {
+    margin-right: 0px;
+  }
+
+  .classification-results {
+    margin-top: 70px;
+    margin-right: 0px;
+  }
+
+  .classifications-table,
+  .win-rate-table {
+    width: 600px;
+    font-size: 13px;
+  }
+
+  .classification-title .title-font {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 877px) {
+  .classifications-table,
+  .win-rate-table {
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 676px) {
+  .win-rate-table {
+    width: 325px;
+    font-size: 10px;
+  }
+
+  .classifications-table {
+    width: 325px;
+    font-size: 8.5px;
+  }
+
+  .button-win-rate-table {
+    margin-left: 0px;
+    width: 175px;
+  }
+
+  .button-matches-table {
+    margin-right: 0px;
+    width: 175px;
+  }
+
+  .two-buttons {
+    flex-direction: column;
+  }
+
+  .select-mirror {
+    width: 11em;
+  }
+
+  .select-1,
+  .select-2 {
+    font-size: 12px;
+  }
+
+  .classifications-table th {
+    padding: 11px;
+  }
+}
+
+@media screen and (max-height: 950px) and (min-width: 876px) {
+  .classification-page {
+    margin-top: 0px;
+    flex-direction: column;
+  }
+
+  .classification-title {
+    margin-top: 50px;
+    flex-direction: row;
+    flex: 30%;
+  }
+
+  .classification-results {
+    flex: 70%;
+  }
+
+  .titles {
+    margin-right: 30px;
+    margin-bottom: 0px;
+    margin-top: 50px;
+  }
+
+  .button-style-classification {
+    margin-left: 30px;
+  }
+
+  .classifications-table,
+  .win-rate-table {
+    width: 800px;
+    font-size: 15px;
+  }
+}
+
+.win-rate-table {
+  display: none;
+}
+
+/*  Definição do CSS para a página do Menu de Configuração do jogo */
+
+.menu {
+  display: none;
+  height: 913px;
+}
+
+.menu-page {
+  display: flex;
+  margin-top: 130px;
+  width: 100%; 
+}
+
+.menu-bottom {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu-top {
+  margin-right: 40px;
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.button-style-start {
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "ArcadeClassic", sans-serif;
+  font-weight: 700;
+  background-color: #e27800;
+  color: #ffffff;
+  font-size: 90px;
+  border: 0;
+  margin-top: 45px;
+  text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,  
+    -1px 1px 0 #000,  
+    1px 1px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000,
+    -3px -3px 0 #000,
+    3px -3px 0 #000,
+    -3px 3px 0 #000,
+    3px 3px 0 #000; /* Contorno preto ainda mais espesso */
+}
+
+.button-style-start:hover {
+  color: #fff200;
+}
+
+
+.button-style-homepage2 {
+  width: 200px;
+  height: 100px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "ArcadeClassic", sans-serif;
+  font-weight: 700;
+  background-color: #ffffff;
+  color: #3a4a83;
+  font-size: 19px;
+  border: 0;
+  margin-top: 90px;
+}
+
+.button-style-homepage2:hover {
+  color: #e27800;
+}
+
+.first-two-options {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.last-two-options {
+  margin-bottom: 200px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.board-size-configuration,
+.game-mode-configuration,
+.ai-difficulty-configuration{
+  font-family: "ArcadeClassic", sans-serif;
+  font-size: 45px;
+  letter-spacing: 7px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,  
+    -1px 1px 0 #000,  
+    1px 1px 0 #000,
+    -2px 0 0 #000,
+    2px 0 0 #000,
+    0 -2px 0 #000,
+    0 2px 0 #000; /* Contorno preto moderado */
+}
+
+.select {
+  position: relative;
+  display: flex;
+  width: 23em;
+  height: 5em;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.select::after {
+  font-size: 25px;
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  transition: 0.7s all ease;
+  pointer-events: none;
+}
+
+.select:hover::after {
+  color: #e27800;
+}
+
+select {
+  appearance: none;
+  outline: 0;
+  border: 0;
+  flex: 1;
+  padding: 0 1em;
+  background-color: #34495e;
+  cursor: pointer;
+  font-size: 25px;
+  background-color: rgba(0, 0, 0, 0.99);
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+#ai-difficulty {
+  display: none;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1600px) {
+  .menu-page {
+    margin-top: 0px;
+    flex-direction: column;
+  }
+
+  .menu-bottom {
+    margin-top: 50px;
+    flex-direction: row;
+  }
+
+  .button-style-start {
+    margin-right: 30px;
+    margin-bottom: 0px;
+  }
+
+  .button-style-homepage2 {
+    margin-left: 30px;
+  }
+
+  .first-two-options {
+    margin-top: 150px;
+    margin-bottom: 40px;
+  }
+
+  .last-two-options {
+    margin-bottom: 150px;
+  }
+}
+
+@media screen and (max-width: 876px) {
+  .menu-bottom {
+    flex-direction: column;
+  }
+
+  .menu-top {
+    margin-right: 0px;
+  }
+
+  .button-style-start {
+    width: 300px;
+    margin-right: 0px;
+  }
+
+  .button-style-homepage2 {
+    margin-top: 30px;
+    margin-left: 0px;
+  }
+
+  .first-two-options {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .first-two-options .config:first-child {
+    margin-bottom: 30px;
+  }
+
+  .last-two-options {
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+
+  .last-two-options .config:first-child {
+    margin-bottom: 30px;
+  }
+
+  .select {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 20em;
+  }
+}
+
+@media screen and (max-height: 950px) and (min-width: 876px) {
+  .menu-page {
+    margin-top: 0px;
+    flex-direction: column;
+  }
+
+  .menu-bottom {
+    margin-top: 50px;
+    flex-direction: row;
+  }
+
+  .button-style-start {
+    margin-right: 30px;
+    margin-bottom: 0px;
+  }
+
+  .button-style-homepage2 {
+    margin-left: 30px;
+  }
+
+  .first-two-options {
+    margin-top: 0px;
+    margin-bottom: 40px;
+  }
+
+  .last-two-options {
+    margin-bottom: 150px;
+  }
+}
+
+/* Definição do CSS para a waiting-page */
+
+.wait-game {
+  height: 100vh;
+  display: none;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.button-style-waiting-page {
+  width: 200px;
+  height: 60px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "ArcadeClassic", sans-serif;
+  font-weight: 700;
+  background-color: #ffffff;
+  color: #3a4a83;
+  font-size: 19px;
+  border: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.wait-game h2 {
+  font-family: "ArcadeClassic", sans-serif;
+  color: #e27800;
+  font-size: 70px;
+  letter-spacing: 4px;
+  position: relative;
+  text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,  
+    -1px 1px 0 #000,  
+    1px 1px 0 #000,
+    -2px 0 0 #000,
+    2px 0 0 #000,
+    0 -2px 0 #000,
+    0 2px 0 #000; /* Contorno preto moderado */
+}
+
+.wait-game h2::after {
+  content: '...';
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.button-style-waiting-page:hover {
+  color: #e27800;
+}
+
+@media screen and (max-width: 876px) {
+  .wait-game h2 {
+    font-size: 35px;
+  }
+
+  .button-style-waiting-page {
+    font-size: 15px;
+  }
+}
+
+/*  Definição do CSS para a página do JOGO NNM´s */
+
+.play-game-name {
+    display:none;
+  font-family: "ArcadeClassic", sans-serif;
+  letter-spacing: 10px;
+  font-size: 70px;
+  color: #e27800;
+  margin-left: -20px;
+  margin-top: 0vh;
+  text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,  
+    -1px 1px 0 #000,  
+    1px 1px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000,
+    -3px -3px 0 #000,
+    3px -3px 0 #000,
+    -3px 3px 0 #000,
+    3px 3px 0 #000; /* Contorno preto ainda mais espesso */
+}
+
+.text {
+    display: none;
+    font-family: "Arcade Rounded", sans-serif;
+    letter-spacing: 5px;
+    font-size: 13px;
+    color: #ffffff;
+    margin-left: -20px;
+    margin-top: 30px;
+    text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,  
+    -1px 1px 0 #000,  
+    1px 1px 0 #000,
+    -2px 0 0 #000,
+    2px 0 0 #000,
+    0 -2px 0 #000,
+    0 2px 0 #000; /* Contorno preto moderado */
+}
+
+.buttons-give-up-back-to-menu {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+#quit-game-button {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "ArcadeClassic", sans-serif;
+  font-weight: 700;
+  background-color: #ffffff;
+  color: #3a4a83;
+  font-size: 19px;
+  border: 0;
+  margin-top: 410px;
+}
+
+#quit-game-button:hover {
+  color: #e27800;
+}
+
+#give-up-button {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "ArcadeClassic", sans-serif;
+  font-weight: 700;
+  background-color: #c56900;
+  color: white;
+  font-size: 19px;
+  border: 0;
+  margin-top: 410px;
+}
+
+#give-up-button:hover {
+  color: #fff200;
+}
+
+table {
+  border-collapse: collapse; /* Collapse borders into a single border */
+  width: 300px; /* Full width for better visibility */
+  height: 300px;
+}
+
+td {
+  text-align: center; /* Center text */
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  position: relative; /* Allow absolute positioning of icons */
+}
+
+/* Customizable classes for borders */
+.border-left-none {
+  border-left: none;
+}
+
+.border-right-none {
+  border-right: none;
+}
+
+.border-top-none {
+  border-top: none;
+}
+
+.border-bottom-none {
+  border-bottom: none;
+}
+
+.circle {
+  position: absolute; /* Position the circle absolutely within the cell */
+  width: 20px; /* Set the width of the circle */
+  height: 20px; /* Set the height of the circle */
+  background-color: rgb(177, 177, 177); /* Circle color */
+  border-radius: 50%; /* Makes the element circular */
+  cursor: pointer; /* Change cursor to indicate draggable */
+  z-index: 3; /* Make sure circles are on top of the table */
+  border: 2px solid black; /* Add a border to the circle */
+}
+
+.circleP {
+  position: absolute; /* Position the circle absolutely within the cell */
+  width: 20px; /* Set the width of the circle */
+  height: 20px; /* Set the height of the circle */
+  background-color: rgb(177, 177, 177); /* Circle color */
+  border-radius: 50%; /* Makes the element circular */
+  cursor: pointer; /* Change cursor to indicate draggable */
+  z-index: 3; /* Make sure circles are on top of the table */
+  border: 2px solid black; /* Add a border to the circle */
+}
+
+.column-one {
+  left: -11px; /* Offset by half the width and height */
+}
+
+.column-two {
+  left: calc((300px/6 * (2 - 1)) - 7px); /* Offset by half the width and height */
+}
+
+.column-three {
+  left: calc((300px/6 * (3 - 1)) - 2px); /* Offset by half the width and height */
+}
+
+.column-four {
+  left: calc((300px/6 * (4 - 1)) - 11.5px); /* Offset by half the width and height */
+}
+
+.column-five {
+  left: calc((300px/6 * (5 - 1)) - 21px); /* Offset by half the width and height */
+}
+
+.column-six {
+  left: calc((300px/6 * (6 - 1)) - 16px); /* Offset by half the width and height */
+}
+
+.column-seven {
+  left: calc((300px/6 * (7 - 1)) - 13px); /* Offset by half the width and height */
+}
+
+
+.row-one {
+  top: calc((300px/6 * (1 - 1)) - 10px); /* Offset by half the width and height */
+}
+
+.row-two {
+  top: calc((300px/6 * (2 - 1)) - 8px); /* Offset by half the width and height */
+}
+
+.row-three {
+  top: calc((300px/6 * (3 - 1)) - 3px); /* Offset by half the width and height */
+}
+
+
+.row-four {
+  top: calc((300px/6 * (4 - 1)) - 11px); /* Offset by half the width and height */
+}
+
+.row-five {
+  top:calc((300px/6 * (5 - 1)) - 21px); /* Offset by half the width and height */
+}
+
+.row-six {
+  top: calc((300px/6 * (6 - 1)) - 16px); /* Offset by half the width and height */
+}
+
+.row-seven {
+  top: calc((300px/6 * (7 - 1)) - 13px); /* Offset by half the width and height */
+}
+
+
+
+
+.bottom-left {
+  left: -10px; /* Offset by half the width and height */
+  bottom: -10px; /* Offset by half the width and height */
+}
+
+.bottom-right {
+  right: -10px; /* Offset by half the width and height */
+  bottom: -10px;
+}
+
+.invisible {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.left-board {
+  left: calc(50% - 320px);
+  display: flex;
+  align-items: center;
+  align-content: center;
+  position: absolute; /* Fixa o tabuleiro na mesma posição que o tabuleiro do jogo */
+  width: 80px; /* Ligeiramente maior que o tabuleiro do jogo */
+  height: 380px; /* Ligeiramente maior que o tabuleiro do jogo */
+  background-color: burlywood; /* Cor de fundo */
+  border-radius: 10px; /* Bordas arredondadas para um efeito estético */
+  border: 10px solid rgb(93, 62, 24);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 5px 15px 3px rgba(0, 0, 0, 0.3);
+}
+
+.left-board .circleP {
+  cursor: default;
+  width: 20px; /* Ajuste o tamanho desejado */
+  height: 20px; /* Ajuste o tamanho desejado */
+  border-radius: 50%; /* Faz com que o elemento tenha formato circular */
+  background-color: rgb(255, 255, 255); /* Cor dos círculos */
+}
+
+.left-board .circleP:nth-child(1) { top: 15px; left: 27px; }
+.left-board .circleP:nth-child(2) { top: 55px; left: 27px; }
+.left-board .circleP:nth-child(3) { top: 95px; left: 27px; }
+.left-board .circleP:nth-child(4) { top: 135px; left: 27px; }
+.left-board .circleP:nth-child(5) { top: 175px; left: 27px; }
+.left-board .circleP:nth-child(6) { top: 215px; left: 27px; }
+.left-board .circleP:nth-child(7) { top: 255px; left: 27px; }
+.left-board .circleP:nth-child(8) { top: 295px; left: 27px; }
+.left-board .circleP:nth-child(9) { top: 335px; left: 27px; }
+
+
+.right-board {
+  left: calc(50% + 320px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: fixed; /* Fixa o tabuleiro na mesma posição que o tabuleiro do jogo */
+  width: 80px; /* Ligeiramente maior que o tabuleiro do jogo */
+  height: 380px; /* Ligeiramente maior que o tabuleiro do jogo */
+  background-color: burlywood; /* Cor de fundo */
+  border-radius: 10px; /* Bordas arredondadas para um efeito estético */
+  border: 10px solid rgb(93, 62, 24);
+  display: flex;
+  flex-wrap: wrap;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 5px 15px 3px rgba(0, 0, 0, 0.3);
+}
+
+.right-board .circleP {
+  cursor: default;
+  width: 20px; /* Ajuste o tamanho desejado */
+  height: 20px; /* Ajuste o tamanho desejado */
+  border-radius: 50%; /* Faz com que o elemento tenha formato circular */
+  background-color: rgb(0, 0, 0); /* Cor dos círculos */
+}
+
+.right-board .circleP:nth-child(1) { top: 15px; left: 27px; }
+.right-board .circleP:nth-child(2) { top: 55px; left: 27px; }
+.right-board .circleP:nth-child(3) { top: 95px; left: 27px; }
+.right-board .circleP:nth-child(4) { top: 135px; left: 27px; }
+.right-board .circleP:nth-child(5) { top: 175px; left: 27px; }
+.right-board .circleP:nth-child(6) { top: 215px; left: 27px; }
+.right-board .circleP:nth-child(7) { top: 255px; left: 27px; }
+.right-board .circleP:nth-child(8) { top: 295px; left: 27px; }
+.right-board .circleP:nth-child(9) { top: 335px; left: 27px; }
+
+.board {
+    display: none;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute; /* Fixa o tabuleiro na mesma posição que o tabuleiro do jogo */
+    z-index: 0; /* Certifica-se de que fica atrás do tabuleiro do jogo */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.35);
+}
+
+.background-board {
+  position: absolute; /* Fixa o tabuleiro na mesma posição que o tabuleiro do jogo */
+  width: 380px; /* Ligeiramente maior que o tabuleiro do jogo */
+  height: 380px; /* Ligeiramente maior que o tabuleiro do jogo */
+  background-color: burlywood; /* Cor de fundo */
+  border-radius: 15px; /* Bordas arredondadas para um efeito estético */
+  border: 10px solid rgb(93, 62, 24);
+  z-index: 0; /* Certifica-se de que fica atrás do tabuleiro do jogo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 5px 15px 3px rgba(0, 0, 0, 0.3);
+}
+
+.men-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  z-index: 2;
+}
+
+.board-table {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  z-index: 1;
+  background-color: burlywood;
+}
+
+.circle[adjacent-circle="true"] {
+  border-color: yellow;
+  border-width: 3px;
+}
+
+.circle[adjacent-circle="false"] {
+  border-color: black;
+  border-width: 2px;
+}
+
+.circle[selected-circle="true"] {
+  border-color: green;
+  border-width: 3px;
+}
+
+@media screen and (max-width: 900px) {
+  .left-board,
+  .right-board {
+    display: none;
+  }
+}
+
+
+
+/* CSS GERAL */
+
+span {
+  display: block;
+  font-weight: bold;
+  color: black;
+}
+
+input {
+  width: 50px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}

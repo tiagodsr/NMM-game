@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Nine Men's Morris</title>
+    <link rel="shortcut icon" href="images/logotipo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.cdnfonts.com/css/arcade-classic"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.cdnfonts.com/css/sports-jersey" rel="stylesheet">          
+    <link href="https://fonts.cdnfonts.com/css/arcade" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+
+    <!-- HTML da Autentication page -->
+    <div class="auth-page" id="auth-page">
+      <div class="left"></div>
+      <div class="right">
+        <div class="form">
+          <h1 class="login-game-name">Nine Men´s Morris</h1>
+          <h1></h1>
+          <h1 class="login-game-name-game">GAME</h1>
+          <form class="auth-credentials">
+            <div class="input-group">
+              <i class="icon fa fa-user"></i>
+              <input
+                id="username-input"
+                type="text"
+                required
+                placeholder="Username"
+                autocomplete="off"
+              />
+            </div>
+            <div class="input-group">
+              <i class="icon fa fa-lock"></i>
+              <input
+                type="password"
+                id="password-input"
+                required
+                placeholder="Password"
+              />
+            </div>
+          </form>
+          <button
+            class="button-style-login"
+            onclick="clickRegister()"
+          >
+            Login
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- HTML da Homepage -->
+    <div class="homepage" id="homepage">
+      <div class="logotipo" id="game-name">
+        <span class="NMM-text">Nine Men's Morris</span>
+        <span class="game-text">GAME</span>
+      </div>
+      <div class="homepage-buttons">
+        <div class="left-buttons">
+          <button class="button-style" onclick="switchPage('homepage', 'menu')">
+            <span class="button-text">START</span>
+          </button>
+        </div>
+        <div class="right-buttons">
+          <button
+            class="button-style"
+            onclick="switchPage('homepage', 'classifications')"
+          >
+            <span class="button-text">CLASSIFICATIONS</span>
+          </button>
+          <button
+            class="button-style"
+            onclick="switchPage('homepage', 'game-rules')"
+          >
+            <span class="button-text">GAMES RULES</span>
+          </button>
+          <button
+            class="button-style"
+            onclick="switchPage('homepage', 'auth-page')"
+          >
+            <span class="button-text">SIGN OUT</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- HTML da Página de Classificações -->
+    <div class="classifications" id="classifications">
+      <div class="classification-page">
+        <div class="classification-title">
+          <div class="titles">
+            <span class="title-font">CLASSIFICATIONS</span>
+          </div>
+          <div class="button-classification-div">
+            <button
+              class="button-style-classification"
+              onclick="switchPage('classifications', 'homepage')"
+            >
+              RETURN<br />
+              TO&nbsp;&nbsp;HOMEPAGE
+            </button>
+          </div>
+        </div>
+        <div class="classification-results" id="classification-results">
+          <!-- Div para os menus selecionáveis (Board size e Game Mode) -->
+          <div class="board-filter" id="board-filter">
+            <!-- Div para o filtro de board size -->
+            <div>
+              <p class="board-size-p">Board Size:</p>
+              <div class="select-mirror">
+                <select name="board-size-filter" id="board-size-filter" class="select-1"
+                  onchange="ranking(this.options[this.selectedIndex].text);"> 
+                  <option value="0">All</option>
+                  <option value="1">3 X 3</option>
+                  <option value="2">2 X 2</option>
+                  <option value="3">4 X 4</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!-- Tabela os resultados das partidas -->
+          <table class="win-rate-table" id="win-rate-table" style="display: table;">
+            <tr>
+              <th class="first">Player Nick</th>
+              <th>Number of Victories</th>
+              <th class="last">Number of Games</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- HTML da Página das Regras do jogo -->
+    <div class="game-rules" id="game-rules">
+      <div class="title-and-rules">
+        <div class="rules-title">
+          <div class="button-rules-div">
+            <button
+              class="button-style-rules"
+              onclick="switchPage('game-rules', 'homepage')"
+            >
+              RETURN<br />
+              TO&nbsp;&nbsp;HOMEPAGE
+            </button>
+          </div>
+        </div>
+        <div class="game-rules-list">
+          <div class="top-window">
+            <div class="title-rules">GAME&nbsp;&nbsp;&nbsp;RULES</div>
+          </div>
+          <div class="content-rules">
+            1 - Each player has a set of 3*n pieces of the same color, which are initially not 
+            placed on the game board, with n being the number of squares on the board.
+            <br /><br />
+            2 - Every match has 2 phases: <br />- Drop Phase<br />
+            - Move Phase <br /><br />
+            3 - A mill is formed by aligning 3 consecutive pieces of the same color 
+            along a straight line, either vertically or horizontally. <br /><br />
+            4 - Drop Phase: <br />- Players alternatively place a piece in a
+            free cell of the board.<br /><br />
+            5 - Move Phase:<br />
+            - Each player moves alternatively one of their pieces.<br />
+            - Each piece can only be moved to the vertically or horizontally adjacent empty cells, except when a 
+            player only has 3 pieces left, in which case they can move a piece to any empty cell.<br />
+            - Creating a line of 3 pieces (mill) allows the current player to remove
+            one and only one piece from the opponent.<br />
+            - In the following round of the same player, its last moved piece
+            can be played back to the cell where it came from.<br /><br />
+            6 - The match is finished when one of the following conditions is
+            met:<br />
+            - The defeat of the player who has only 2 pieces.<br />
+            - A draw occurs if no valid move is possible (i.e., all pieces are
+            trapped) or if both players have 3 pieces and no winner is determined within 10 moves.<br />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HTML definition for the Waiting For Game page -->
+    <div class="wait-game" id="wait-game">
+      <h2>Waiting&nbsp;&nbsp;for&nbsp;&nbsp;a&nbsp;&nbsp;game</h2>
+      <div class="button-style-waiting-page" id="quit-wait-game-button" onclick="giveUpRequest();switchPage('wait-game', 'menu');">
+        STOP<br>BACK TO MENU 
+      </div>
+    </div>
+
+    <!-- HTML para o menu de configuração do jogo -->
+    <!-- ENTREGA : onclick="switchPage('menu','board', ['play-game-name', 'text']);" -->
+    <div class="menu" id="menu">
+      <div class="menu-page">
+        <div class="menu-bottom">
+          <div class="button-start">
+            <button
+              type="button"
+              class="button-style-start"
+              onclick="lookForGame();"
+            >
+            READY !
+            </button>
+          </div>
+          <div class="button-homepage2">
+            <button
+              class="button-style-homepage2"
+              onclick="switchPage('menu', 'homepage')"
+            >
+              RETURN<br />
+              TO&nbsp;&nbsp;HOMEPAGE
+            </button>
+          </div>
+        </div>
+        <div class="menu-top">
+          <div class="first-two-options">
+            <div id="board-size-menu" class="config">
+              <span class="board-size-configuration"
+                >Board<br />
+                Size</span
+              >
+              <div class="select">
+                <select id="board-size-select" onchange="setBoardSize(this.value)">
+                  <option value="0">3 X 3</option>
+                  <option value="1">2 X 2</option>
+                  <option value="2">4 X 4</option>
+                </select>
+              </div>
+            </div>
+            <div id="game-mode" class="config">
+              <span class="game-mode-configuration"
+                >Game<br />
+                Mode</span
+              >
+              <div class="select">
+                <select
+                  id="game-mode-select"
+                >
+                  <option value="0">Player X Player</option>
+                  <option value="1">Player X AI</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="last-two-options">
+            <div id="ai-difficulty" class="config">
+              <span class="ai-difficulty-configuration"
+                >AI<br />
+                Difficulty</span
+              >
+              <div class="select">
+                <select
+                  id="ai-difficulty-select"
+                >
+                  <option value="0">Easy</option>
+                  <option value="1">Medium</option>
+                  <option value="2">Hard</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HTML para a página do JOGO -->
+    <div id="game">
+        <div class="play-game-name" id="play-game-name">Nine Men's Morris</div>
+        <div class="text" id="text">White player : place a piece</div>
+        <div class="board" id="board">
+            <div class="left-board">
+              <div class="circleP"></div>
+              <div class="circleP"></div>
+              <div class="circleP"></div>
+              <div class="circleP"></div>
+              <div class="circleP"></div>
+              <div class="circleP"></div>
+              <div class="circleP"></div>
+              <div class="circleP"></div>
+              <div class="circleP"></div>
+            </div>
+            <div class="right-board">
+              <div class="circleP"></div>
+              <div class="circleP"></div>
+              <div class="circleP"></div>
+              <div class="circleP"></div>
+              <div class="circleP"></div>
+              <div class="circleP"></div>
+              <div class="circleP"></div>
+              <div class="circleP"></div>
+              <div class="circleP"></div>
+            </div>
+            <div class="background-board"></div>
+            <div class="men-container">
+                <div class="buttons-give-up-back-to-menu">
+                    <button id="give-up-button" class="button-style" onclick="msgGiveUp();giveUp();clearAllHighlights()">
+                        GIVE&nbsp;&nbsp;UP
+                    </button>
+                    <button id="quit-game-button"
+                            class="button-style"
+                            onclick="switchPage('board', 'menu', ['play-game-name', 'text']);giveUp();clearAllHighlights()">
+                        PREVIOUS&nbsp;&nbsp;PAGE
+                    </button>
+                </div>
+                <div id="trilha-pieces-row-1">
+                    <div class="circle row-one column-one" data-row="1" data-column="1" occupied="false"></div>
+                    <div class="circle row-one column-four" data-row="1" data-column="4" occupied="false"></div>
+                    <div class="circle row-one column-seven" data-row="1" data-column="7" occupied="false"></div>
+                </div>
+                <div id="trilha-pieces-row-2">
+                    <div class="circle row-two column-two" data-row="2" data-column="2" occupied="false"></div>
+                    <div class="circle row-two column-four" data-row="2" data-column="4" occupied="false"></div>
+                    <div class="circle row-two column-six" data-row="2" data-column="6" occupied="false"></div>
+                </div>
+                <div id="trilha-pieces-row-3">
+                    <div class="circle row-three column-three" data-row="3" data-column="3" occupied="false"></div>
+                    <div class="circle row-three column-four" data-row="3" data-column="4" occupied="false"></div>
+                    <div class="circle row-three column-five" data-row="3" data-column="5" occupied="false"></div>
+                </div>
+                <div id="trilha-pieces-row-4">
+                    <div class="circle row-four column-one" data-row="4" data-column="1" occupied="false"></div>
+                    <div class="circle row-four column-two" data-row="4" data-column="2" occupied="false"></div>
+                    <div class="circle row-four column-three" data-row="4" data-column="3" occupied="false"></div>
+                    <div class="circle row-four column-five" data-row="4" data-column="5" occupied="false"></div>
+                    <div class="circle row-four column-six" data-row="4" data-column="6" occupied="false"></div>
+                    <div class="circle row-four column-seven" data-row="4" data-column="7" occupied="false"></div>
+                </div>
+                <div id="trilha-pieces-row-5">
+                    <div class="circle row-five column-three" data-row="5" data-column="3" occupied="false"></div>
+                    <div class="circle row-five column-four" data-row="5" data-column="4" occupied="false"></div>
+                    <div class="circle row-five column-five" data-row="5" data-column="5" occupied="false"></div>
+                </div>
+                <div id="trilha-pieces-row-6">
+                    <div class="circle row-six column-two" data-row="6" data-column="2" occupied="false"></div>
+                    <div class="circle row-six column-four" data-row="6" data-column="4" occupied="false"></div>
+                    <div class="circle row-six column-six" data-row="6" data-column="6" occupied="false"></div>
+                </div>
+                <div id="trilha-pieces-row-7">
+                    <div class="circle row-seven column-one" data-row="7" data-column="1" occupied="false"></div>
+                    <div class="circle row-seven column-four" data-row="7" data-column="4" occupied="false"></div>
+                    <div class="circle row-seven column-seven" data-row="7" data-column="7" occupied="false"></div>
+                </div>
+            </div>
+
+            <table class="board-table">
+                <tr>
+                    <td class="border-right-none border-bottom-none"></td>
+                    <td class="border-left-none border-right-none"></td>
+                    <td class="border-left-none"></td>
+                    <td class="border-right-none"></td>
+                    <td class="border-left-none border-right-none"></td>
+                    <td class="border-left-none border-bottom-none"></td>
+                </tr>
+                <tr>
+                    <td class="border-top-none border-bottom-none"></td>
+                    <td class="border-right-none border-bottom-none"></td>
+                    <td class="border-left-none border-bottom-none"></td>
+                    <td class="border-right-none border-bottom-none"></td>
+                    <td class="border-left-none border-bottom-none"></td>
+                    <td class="border-top-none border-bottom-none"></td>
+                </tr>
+                <tr>
+                    <td class="border-bottom-none border-top-none"></td>
+                    <td class="border-left-none border-right-none border-top-none"></td>
+                    <td class="border-bottom-none border-right-none"></td>
+                    <td class="border-bottom-none border-left-none"></td>
+                    <td class="border-left-none border-right-none border-top-none"></td>
+                    <td class="border-top-none"></td>
+                </tr>
+                <tr>
+                    <td class="border-bottom-none"></td>
+                    <td class="border-right-none border-bottom-none"></td>
+                    <td class="border-bottom-none border-top-none border-right-none"></td>
+                    <td class="border-top-none border-left-none"></td>
+                    <td class="border-left-none border-bottom-none"></td>
+                    <td class="border-bottom-none"></td>
+                </tr>
+                <tr>
+                    <td class="border-bottom-none border-top-none"></td>
+                    <td class="border-left-none border-right-none border-top-none"></td>
+                    <td class="border-left-none"></td>
+                    <td class="border-right-none"></td>
+                    <td class="border-left-none border-right-none border-top-none"></td>
+                    <td class="border-bottom-none border-top-none"></td>
+                </tr>
+                <tr>
+                    <td class="border-top-none border-right-none"></td>
+                    <td class="border-right-none border-left-none"></td>
+                    <td class="border-left-none"></td>
+                    <td class="border-right-none"></td>
+                    <td class="border-left-none border-right-none"></td>
+                    <td class="border-top-none border-left-none"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+
+    <!-- Importing necessary scripts -->
+
+    <script src="game.js"></script>
+    <script src="communication.js"></script>
+  </body>
+</html>
